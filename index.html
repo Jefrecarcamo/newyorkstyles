@@ -1,0 +1,117 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York Styles - Barbería</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <section id="hero">
+        <div class="hero-content">
+            <h2>NEW YORK STYLES</h2>
+            <p>La mejor barbería en la ciudad de Santa Ana</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="booking-section">
+            <h2>Agenda Tu Cita</h2>
+            <div class="operating-hours">
+                <h3>Horario de Atención:</h3>
+                <p>Lunes a Sábado: 9:00 AM - 8:00 PM</p>
+                <p>Domingo: 9:00 AM - 4:00 PM</p>
+            </div>
+
+            <form id="booking-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="date">Fecha:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Hora:</label>
+                        <div id="time-slots-container">
+                            <p>Selecciona una fecha para ver horarios disponibles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <h3>Servicios:</h3>
+                    <div id="services-container" class="services-grid">
+                        <!-- Services will be populated by JS -->
+                    </div>
+                </div>
+                
+                <div class="form-group total-price-container">
+                    <strong>Total Estimado: $<span id="total-price">0.00</span></strong>
+                </div>
+
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Número de Teléfono:</label>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{4}-[0-9]{4}" placeholder="Ej: 7777-7777">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Reservar Cita</button>
+                <p id="booking-message" class="message"></p>
+                <img src="foto2.jpg" class="barbershop-exterior-image">
+            </form>
+        </section>
+
+        <section id="admin-login-section" style="display: none;">
+            <h2>Acceso Administrador</h2>
+            <form id="admin-login-form">
+                <div class="form-group">
+                    <label for="admin-email">Correo:</label>
+                    <input type="email" id="admin-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Contraseña:</label>
+                    <input type="password" id="admin-password" required>
+                </div>
+                <button type="submit" class="btn">Ingresar</button>
+                <p id="admin-login-message" class="message"></p>
+            </form>
+        </section>
+
+        <section id="admin-panel-section" style="display: none;">
+            <h2>Panel de Administración de Citas</h2>
+            <button id="admin-logout-button" class="btn btn-secondary">Cerrar Sesión</button>
+            <div id="admin-appointments-list">
+                <!-- Appointments will be populated by JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: plaza heroica, sobre avenida independencia sur final de 31 calle pte.</p>
+                    <p><i class="fas fa-phone"></i> Teléfono: 7226-3809</p>
+                </div>
+                <div class="footer-parking">
+                    <p><i class="fas fa-parking"></i> Recuerda que contamos con estacionamiento garantizado para todos nuestros clientes.</p>
+                </div>
+            </div>
+            <p class="admin-login-link-container">
+                <a href="#" id="show-admin-login-link">Acceso Administrador</a>
+            </p>
+            <p>&copy; 2024 New York Styles. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
